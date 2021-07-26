@@ -24,13 +24,20 @@ mysql.init_app(app)
 #     result = cursor.fetchall()
 #     return render_template('index.html', title='Home', user=user, players=result)
 
-@app.route("/", methods=['GET'])
-def hello():
-    if request.method != 'GET':
-        return make_response('Malformed request', 400)
-    my_dict = {'key': 'dictionary value'}
-    headers = {"Content-Type": "application/json"}
-    return make_response(jsonify(my_dict), 200, headers)
+@app.route("/")
+def home():
+    """Landing page route."""
+    nav = [
+        {"name": "Home", "url": "https://example.com/1"},
+        {"name": "About", "url": "https://example.com/2"},
+        {"name": "Pics", "url": "https://example.com/3"},
+    ]
+    return render_template(
+        "home.html",
+        nav=nav,
+        title="Jinja Demo Site",
+        description="Smarter page templates with Flask & Jinja.",
+    )
 
 
 @app.route('/view/<int:player_id>', methods=['GET'])
