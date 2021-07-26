@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit/{{ player.id }}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="fldName">Player Name</label>
+            <input id="fldName" type="text" class="form-control" placeholder="Player Name" name="fldName" value="{{ player.fldName }}">
+        </div>
+        <div class="col">
+            <label for="fldTeam">Team</label>
+            <input id="fldTeam" type="text" class="form-control" placeholder="Team" name="fldTeam" value="{{ player.fldTeam }}">
+        </div>
+        <div class="col">
+            <label for="fldPosition">Position</label>
+            <input id="fldPosition" type="text" class="form-control" placeholder="Position" name="fldPosition" value="{{ player.fldPosition }}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="fldHeight_inches">Height (inches)</label>
+            <input id="fldHeight_inches" type="text" class="form-control" placeholder="Height" name="fldHeight_inches" value="{{ player.fldHeight_inches }}">
+        </div>
+        <div class="col">
+            <label for="fldWeight_lbs">Weight (pounds)</label>
+            <input id="fldWeight_lbs" type="text" class="form-control" placeholder="Weight" name="fldWeight_lbs" value="{{ player.fldWeight_lbs }}">
+        </div>
+        <div class="col">
+            <label for="fldAge">Age</label>
+            <input id="fldAge" type="text" class="form-control" placeholder="Age" name="fldAge" value="{{ player.fldAge }}">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+{% endblock %}
+
