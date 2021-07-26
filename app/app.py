@@ -16,13 +16,17 @@ app.config['MYSQL_DATABASE_DB'] = 'mlbData'
 mysql.init_app(app)
 
 
-@app.route('/', methods=['GET'])
-def index():
-    user = {'username': 'Roberts Project'}
-    cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblMlbImport')
-    result = cursor.fetchall()
-    return render_template('index.html', title='Home', user=user, players=result)
+# @app.route('/', methods=['GET'])
+# def index():
+#     user = {'username': 'Roberts Project'}
+#     cursor = mysql.get_db().cursor()
+#     cursor.execute('SELECT * FROM tblMlbImport')
+#     result = cursor.fetchall()
+#     return render_template('index.html', title='Home', user=user, players=result)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
 
 
 @app.route('/view/<int:player_id>', methods=['GET'])
