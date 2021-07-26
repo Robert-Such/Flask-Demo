@@ -1,6 +1,6 @@
 from typing import List, Dict
 import simplejson as json
-from flask import Flask, request, Response, redirect
+from flask import Flask, request, Response, redirect, Markup, make_response, jsonify
 from flask import render_template
 from flaskext.mysql import MySQL
 from pymysql.cursors import DictCursor
@@ -16,13 +16,21 @@ app.config['MYSQL_DATABASE_DB'] = 'mlbData'
 mysql.init_app(app)
 
 
-@app.route('/', methods=['GET'])
-def index():
-    user = {'username': 'Roberts Project'}
-    cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM tblMlbImport')
-    result = cursor.fetchall()
-    return render_template('index.html', title='Home', user=user, players=result)
+# @app.route('/', methods=['GET'])
+# def index():
+#     user = {'username': 'Roberts Project'}
+#     cursor = mysql.get_db().cursor()
+#     cursor.execute('SELECT * FROM tblMlbImport')
+#     result = cursor.fetchall()
+#     return render_template('index.html', title='Home', user=user, players=result)
+
+@app.route("/", methods=['GET'])
+def hello():
+    if request.method != 'GET':
+        return make_response('Malformed request', 400)
+    my_dict = {'key': 'dictionary value'}
+    headers = {"Content-Type": "application/json"}
+    return make_response(jsonify(my_dict), 200, headers)
 
 
 @app.route('/view/<int:player_id>', methods=['GET'])
