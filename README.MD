@@ -18,4 +18,7 @@ This project is to demonstrate the following tasks:
 ![output task 1](screenshots/Output_Task_1.png)
 
 ## Screenshot showing test output of Task 2:
-![output task 1](screenshots/Output_Task_2.png)
+![output task 2](screenshots/Output_Task_2.png)
+
+## Screenshot showing test output of Task 3:
+![output task 3](screenshots/Output_Task_3.png)
