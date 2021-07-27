@@ -14,14 +14,5 @@ This project is to demonstrate the following tasks:
 11. Managing Session Data with Flask-Session & Redis
 
 
-## Screenshot showing test output of Task 1:
-![output task 1](screenshots/Output_Task_1.png)
+## Screenshot:
 
-## Screenshot showing test output of Task 2:
-![output task 2](screenshots/Output_Task_2.png)
-
-## Screenshot showing test output of Task 3:
-![output task 3](screenshots/Output_Task_3.png)
-
-## Screenshot showing test output of Task 4:
-(N/A: Not Applicable)
