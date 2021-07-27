@@ -22,3 +22,6 @@ This project is to demonstrate the following tasks:
 
 ## Screenshot showing test output of Task 3:
 ![output task 3](screenshots/Output_Task_3.png)
+
+## Screenshot showing test output of Task 4:
+(N/A: Not Applicable)
