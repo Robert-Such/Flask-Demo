@@ -1,6 +1,0 @@
-Flask
-flask-mysql
-flask-wtf
-simplejson
-wtforms[email]
-python-dotenv
