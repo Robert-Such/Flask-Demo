@@ -1,5 +1,5 @@
 # IS 601 - Final Project:
-This project is to demonstrate the following tasks:
+**This project is to demonstrate the following tasks:**
 
 1. Create Flask Application
 2. Render Pages in Flask Using Jinja
@@ -13,8 +13,10 @@ This project is to demonstrate the following tasks:
 10. Handle User Accounts & Authentication in Flask with Flask-Login
 11. Managing Session Data with Flask-Session & Redis
 
-Note: This project is based on the following tutorial:
+**NOTES:**
+ - This project is based on the following tutorial:
 https://hackersandslackers.com/series/build-flask-apps/
+ - Modifications have been made to allow this project to run via a docker-compose setup.   
 
 
 ## Screenshot:
