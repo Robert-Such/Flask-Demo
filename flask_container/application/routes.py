@@ -8,8 +8,8 @@ from .forms import ContactForm, SignupForm
 def home():
     """Landing page."""
     return render_template(
-        "index.jinja2",
-        template="home-template",
+        "dashboard.jinja2",
+        template="admin-template",
         title="Flask-WTF tutorial"
     )
 
