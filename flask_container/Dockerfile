@@ -1,4 +1,4 @@
-FROM node:8-slim
+FROM node:16-slim
 
 EXPOSE 5000
 
