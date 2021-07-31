@@ -8,6 +8,12 @@ services:
     depends_on:
       - db
       - redis
+    command: sh -c "/wait && uwsgi app.ini"
+    environment:
+      - WAIT_HOSTS=redis:6379, db:3306
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=2
+      - WAIT_HOST_CONNECT_TIMEOUT=30
 
   db:
     image: mysql:5.7

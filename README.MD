@@ -17,8 +17,7 @@
  - This project is based on the following tutorial:
 https://hackersandslackers.com/series/build-flask-apps/
  - Modifications have been made to allow this project to run via a docker-compose setup.
- - Docker-compose is set to deploy containers for FLASK, MYSQL, and REDIS however the MYSQL
-   container takes the longest to spin up.  A simple restart of the Flask container should resolve
-   any issues with rejected requests to the MYSQL.
+ - Docker-compose-wait is being used to make sure that the redis & mysql containers are up
+   and ready to accept connections before flask starts sending requests.
  - Screenshots of output for the various tasks are available in the screenshots folder.
 
