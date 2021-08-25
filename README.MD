@@ -1,4 +1,4 @@
-# IS 601 - Final Project:
+# Flask Demo:
 **This project is to demonstrate the following tasks:**
 
 1. Create Flask Application
